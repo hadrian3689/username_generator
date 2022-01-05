@@ -10,18 +10,18 @@ A username generator written in C
 
 * First compile
 ```
-gcc username_generator.c -o unamegen
+gcc username_generator.c -o username_generator
 ```
 * Then execute
 ```
-./unamegen firstname lastname #oflines
+./username_generator firstname lastname #oflines
 ```
 
 ## Example
 
 * A quick example
 ```
-./unamegen doom guy 100
+./username_generator doom guy 100
 ```
 
 ## Disclaimer
