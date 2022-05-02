@@ -1,7 +1,21 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h> 
-#include <time.h> 
+#include <time.h>
+
+int generator(char* fname,char* lname,int num_lines);
+
+int main(int argc, char* argv[]) { 
+
+    if (argc == 4){ 
+        int num_lines = atoi(argv[3]); 
+        generator(argv[1],argv[2],num_lines);
+        
+    }
+    else {
+        printf("Missing or too many arguments. E.G ./usernamegenerator fname lname 10");
+    }
+}
 
 int generator(char* fname,char* lname,int num_lines) {
     srand(time(0)); 
@@ -197,18 +211,5 @@ int generator(char* fname,char* lname,int num_lines) {
 
         }
 
-    }
-}
-
-
-int main(int argc, char* argv[]) { 
-
-    if (argc == 4){ 
-        int num_lines = atoi(argv[3]); 
-        generator(argv[1],argv[2],num_lines);
-        
-    }
-    else {
-        printf("Missing or too many arguments. E.G ./usernamegenerator fname lname 10");
     }
 }
